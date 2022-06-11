@@ -11,15 +11,13 @@ class App extends React.Component {
     this.setState({
       searchfield: event.target.value,
     });
-  
-   
   };
   render() {
     const filteredRobots = this.state.robots.filter((robot) => {
-      return  robot.name
-          .toLowerCase()
-          .includes(this.state.searchfield.toLocaleLowerCase());
-      });
+      return robot.name
+        .toLowerCase()
+        .includes(this.state.searchfield.toLocaleLowerCase());
+    });
 
     return (
       <div className="tc">
